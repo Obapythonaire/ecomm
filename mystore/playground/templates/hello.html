@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+
+    
+    <!-- {% if name %}
+    <p><strong><h3> Hello {{ name }}.</h3></strong></p>
+    {% else %}
+    <p><strong><h3>Hello everyone.</h3></strong></p>
+    {% endif %} -->
+
+    
+    <p><strong><h3> Hello {% if name %} {{ name }}. {% else %} everyone. {% endif %}</h3></strong></p>
+    
+    <!-- <p><strong><h3>Hello everyone.</h3></strong></p> -->
+   <p> <strong>Unit Price (Product)</strong></p>
+   {% for product in queryset %}
+   <ul>
+    <!-- <li>{{ product.title }} | {{ product.unit_price }} | {{ product.collection.title }}</li> -->
+    <li>{{ product.id }} - {{ product.customer.first_name }} </li>
+    
+   </ul>
+   {% endfor %} 
+   <!-- {{ result }} -->
+
+    
+</body>
+</html>
